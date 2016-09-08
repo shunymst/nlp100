@@ -14,6 +14,10 @@ import ngram
 import numpy as np
 import nlp30
 import nlp36
+
+import matplotlib
+matplotlib.use('Agg')
+import pylab
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 
@@ -26,6 +30,7 @@ frequency = nlp36.get_frequency([morpheme['surface'] for morpheme in morphemes])
 fig = plt.figure(figsize=(20, 6))
 
 # 37. 出現頻度が高い10語とその出現頻度をグラフ（例えば棒グラフなど）で表示せよ．
+"""
 words = [f[0] for f in frequency[0:10]]
 x_pos = np.arange(len(words))
 fp = FontProperties(fname=r'/Library/Fonts/ヒラギノ丸ゴ ProN W4.ttc', size=14)
@@ -36,6 +41,7 @@ ax1.set_xticks(x_pos)
 ax1.set_xticklabels(words, fontproperties=fp)
 ax1.set_ylabel('Frequency')
 ax1.set_title('Top 10 frequent words')
+"""
 
 # 38. 単語の出現頻度のヒストグラム（横軸に出現頻度，縦軸に出現頻度をとる単語の種類数を棒グラフで表したもの）を描け．
 freq = list(dict(frequency).values())
